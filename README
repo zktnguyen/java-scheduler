@@ -1,0 +1,152 @@
+Author: Kim Thi Nguyen
+E-Mail: kimtnguyen4@gmail.com 
+Source Files:
+  Scheduler.java
+  Appointment.java
+  Time.java
+
+Scheduler.java
+  - SHORT DESCRIPTION (see below for in depth description):
+      - This class is the "Main" class of this project. It executes the fundamental methods described in the assignment:
+          1. Adding an appointment (to the member variable ArrayList<Appointment> appts)
+          2. Listing the appointment(s) (from the member variable ArrayList<Appointment> appts)
+          3. Exiting the program
+      - Completed by using the Appointment and Time classes.
+      - You can only schedule future appointments for the current day.
+            - Ex: If it's 3:00PM, you can only schedule appointments until 11:59 PM for the same day.
+
+Appointment.java
+  - SHORT DESCRIPTION (see below for in depth description):
+      - This class has two member variables, a Time object and an ApptType (enum).
+          - These member variables characterize appointments by their starting time and appointment type.
+
+Time.java
+  - SHORT DESCRIPTION (see below for in depth description):
+      - This class has 3 member variables: int hour, int minute, and String AMPM.
+      - Represents the Western style of displaying time (HH:mm a) where HH is from 1~12, mm is 0~59 and a is AM or PM.
+
+HOW TO RUN:
+  1. This project runs from the command line. I used the MAC OSX terminal to develop this project.
+  2. Compile the .java files using command: javac Scheduler.java
+      - This will result in Scheduler.class, Appointment.class, Appointment$ApptType.class, and Time.class files.
+  3. Run the program with this command: java Scheduler
+  4. Follow the instructions that are printed from the program.
+
+LOG:
+  RUN #1:
+  $java Scheduler
+Welcome to your scheduler!
+The current time is:  8:51 PM
+1. Add appointment
+2. List appointment(s)
+3. Exit
+Enter one of the choices to proceed: 1
+Please enter the desired time (Format: HH MM AM/PM): 9 00 PM
+1. Haircut (30 minutes)
+2. Haircut and Shampoo(60 minutes)
+Enter which appointment you want to make: 1
+Adding appointment!
+1. Add appointment
+2. List appointment(s)
+3. Exit
+Enter one of the choices to proceed: 1
+Please enter the desired time (Format: HH MM AM/PM): 9 15 PM
+This timeslot is unavailable!
+Please enter the desired time (Format: HH MM AM/PM): 9 30 PM
+1. Haircut (30 minutes)
+2. Haircut and Shampoo(60 minutes)
+Enter which appointment you want to make: 2
+Adding appointment!
+1. Add appointment
+2. List appointment(s)
+3. Exit
+Enter one of the choices to proceed: 1
+Please enter the desired time (Format: HH MM AM/PM): 10 15 PM
+This timeslot is unavailable!
+Please enter the desired time (Format: HH MM AM/PM): 10 30 PM
+1. Haircut (30 minutes)
+2. Haircut and Shampoo(60 minutes)
+Enter which appointment you want to make: 1
+Adding appointment!
+1. Add appointment
+2. List appointment(s)
+3. Exit
+Enter one of the choices to proceed: 1
+Please enter the desired time (Format: HH MM AM/PM): 11 00 PM
+1. Haircut (30 minutes)
+2. Haircut and Shampoo(60 minutes)
+Enter which appointment you want to make: 2
+Adding appointment!
+1. Add appointment
+2. List appointment(s)
+3. Exit
+Enter one of the choices to proceed: 2
+Time                Appointment Type
+ 9:00 PM            Haircut
+ 9:30 PM            Haircut_plus_shampoo
+10:30 PM            Haircut
+11:00 PM            Haircut_plus_shampoo
+1. Add appointment
+2. List appointment(s)
+3. Exit
+Enter one of the choices to proceed: 3
+Exiting...
+
+RUN #2:
+$ java Scheduler
+Welcome to your scheduler!
+The current time is: 12:12 PM
+1. Add appointment
+2. List appointment(s)
+3. Exit
+Enter one of the choices to proceed: 1
+Please enter the desired time (Format: HH MM AM/PM): 12 13 PM
+Please enter the desired time (Format: HH MM AM/PM): 12 15 PM
+1. Haircut (30 minutes)
+2. Haircut and Shampoo(60 minutes)
+Enter which appointment you want to make: 2
+Adding appointment!
+1. Add appointment
+2. List appointment(s)
+3. Exit
+Enter one of the choices to proceed: 1
+Please enter the desired time (Format: HH MM AM/PM): 4 11 PM
+Please enter the desired time (Format: HH MM AM/PM): 4 30 PM
+1. Haircut (30 minutes)
+2. Haircut and Shampoo(60 minutes)
+Enter which appointment you want to make: 1
+Adding appointment!
+1. Add appointment
+2. List appointment(s)
+3. Exit
+Enter one of the choices to proceed: 1
+Please enter the desired time (Format: HH MM AM/PM): 3 00 PM
+1. Haircut (30 minutes)
+2. Haircut and Shampoo(60 minutes)
+Enter which appointment you want to make: 1
+Adding appointment!
+1. Add appointment
+2. List appointment(s)
+3. Exit
+Enter one of the choices to proceed: 1
+Please enter the desired time (Format: HH MM AM/PM): 1 00 PM
+This timeslot is unavailable!
+Please enter the desired time (Format: HH MM AM/PM): 1 15 PM
+1. Haircut (30 minutes)
+2. Haircut and Shampoo(60 minutes)
+Enter which appointment you want to make: 1
+Adding appointment!
+1. Add appointment
+2. List appointment(s)
+3. Exit
+Enter one of the choices to proceed: 2
+Time                Appointment Type
+12:15 PM            Haircut_plus_shampoo
+ 1:15 PM            Haircut
+ 3:00 PM            Haircut
+ 4:30 PM            Haircut
+1. Add appointment
+2. List appointment(s)
+3. Exit
+Enter one of the choices to proceed: 3
+Exiting...
